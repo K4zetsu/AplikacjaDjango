@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta class="author" content="Piotr Trzeciak">
+        <link href="{% static 'css/faq.css'%}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <a href="http://127.0.0.1:8000/"><img src="{% static 'img/logo-no-background.png'%}" alt="zdjecie logo" id="zdjecie"/></a>
+        </div>
+
+        <center><table id="menu" style="margin:50px; padding:15px ;">
+            <td id="strona_glowna"><a href="http://127.0.0.1:8000/">STRONA GŁÓWNA</a></td>
+            <td id="o_nas"><a href="http://127.0.0.1:8000/o_nas/">O NAS</a></td>
+            <td id="kontakt"><a href="http://127.0.0.1:8000/kontakt/">KONTAKT</a></td>
+            <td id="faq"><a href="http://127.0.0.1:8000/faq/">FAQ</a></td>
+            <td id="cennik"><a href="http://127.0.0.1:8000/cennik/">CENNIK</a></td>
+            <form action="{% url 'price_url' %}" method="get">
+                <td id="szukajka"><input id="szukajka" type="search" name="q" size="20" placeholder="Wyszukaj produkt"/><button type="submit">Wyszukaj</button></td>
+                </form>     
+                </table>   
+        <h1 id="oczym">Najczęściej zadawane pytania przez naszych klientów</h1>
+        <div><table id="pytania" style="margin:50px; padding:15px;">
+            <tr><td></td><td class="zapytanie">Gdzie nas znaleźć?</td></tr><tr class="wiersz"><td id="pytanie1" class="kolumna"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6492.663740609815!2d139.51093559617317!3d35.54550515009699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f8324d5f8ebb%3A0xa78f984429fe30!2sAobadai%2C%20Aoba%2C%20Jokohama%2C%20Prefektura%20Kanagawa%20227-0062%2C%20Japonia!5e0!3m2!1spl!2spl!4v1670584719824!5m2!1spl!2spl" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td><td id="odpowiedz1" class="kolumna1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque odio, dictum in purus sed, ornare lacinia orci. Vestibulum erat turpis, condimentum a lorem eu, euismod imperdiet magna. In egestas eu ex ut pulvinar. Quisque sollicitudin at turpis id ultrices. Donec vitae odio auctor, molestie lorem sed, tincidunt quam. Donec ornare venenatis enim sit amet varius. Morbi urna odio, eleifend viverra pretium et, commodo sit amet neque. Fusce nec semper erat. Sed vel nisi elementum, luctus ante nec, interdum neque. Sed a eleifend massa. Mauris sit amet scelerisque augue. Sed non porta magna.</td></tr>
+            <tr><td></td><td class="zapytanie">Jak zacząć grać?</td></tr><tr class="wiersz"><td id="pytanie2" class="kolumna"><img src="{%static 'img/corki.jpg'%}" alt="zdjecie" class="zdjecie_pytania"></td><td id="odpowiedz2" class="kolumna1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque odio, dictum in purus sed, ornare lacinia orci. Vestibulum erat turpis, condimentum a lorem eu, euismod imperdiet magna. In egestas eu ex ut pulvinar. Quisque sollicitudin at turpis id ultrices. Donec vitae odio auctor, molestie lorem sed, tincidunt quam. Donec ornare venenatis enim sit amet varius. Morbi urna odio, eleifend viverra pretium et, commodo sit amet neque. Fusce nec semper erat. Sed vel nisi elementum, luctus ante nec, interdum neque. Sed a eleifend massa. Mauris sit amet scelerisque augue. Sed non porta magna.</td></tr>
+            <tr><td></td><td class="zapytanie">Czego potrzebuję?</td></tr><tr class="wiersz"><td id="pytanie3" class="kolumna"><img src="{% static 'img/thumb.jpg'%}" alt="zdjecie" class="zdjecie_pytania"></td><td id="odpowiedz3" class="kolumna1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque odio, dictum in purus sed, ornare lacinia orci. Vestibulum erat turpis, condimentum a lorem eu, euismod imperdiet magna. In egestas eu ex ut pulvinar. Quisque sollicitudin at turpis id ultrices. Donec vitae odio auctor, molestie lorem sed, tincidunt quam. Donec ornare venenatis enim sit amet varius. Morbi urna odio, eleifend viverra pretium et, commodo sit amet neque. Fusce nec semper erat. Sed vel nisi elementum, luctus ante nec, interdum neque. Sed a eleifend massa. Mauris sit amet scelerisque augue. Sed non porta magna.</td></tr>
+            <tr><td></td><td class="zapytanie">Ilu osób potrzeba?</td></tr><tr class="wiersz"><td id="pytanie4" class="kolumna"><img src="{% static 'img/ileosob.png'%}" alt="zdjecie" class="zdjecie_pytania"></td><td id="odpowiedz4" class="kolumna1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque odio, dictum in purus sed, ornare lacinia orci. Vestibulum erat turpis, condimentum a lorem eu, euismod imperdiet magna. In egestas eu ex ut pulvinar. Quisque sollicitudin at turpis id ultrices. Donec vitae odio auctor, molestie lorem sed, tincidunt quam. Donec ornare venenatis enim sit amet varius. Morbi urna odio, eleifend viverra pretium et, commodo sit amet neque. Fusce nec semper erat. Sed vel nisi elementum, luctus ante nec, interdum neque. Sed a eleifend massa. Mauris sit amet scelerisque augue. Sed non porta magna.</td></tr>
+            <tr><td></td><td class="zapytanie">Jak zaliczyć TWwB?</td></tr><tr class="wiersz"><td id="pytanie5" class="kolumna"><img src="{%static 'img/twwb.png'%}" alt="zdjecie" class="zdjecie_pytania"></td><td id="odpowiedz5" class="kolumna1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc neque odio, dictum in purus sed, ornare lacinia orci. Vestibulum erat turpis, condimentum a lorem eu, euismod imperdiet magna. In egestas eu ex ut pulvinar. Quisque sollicitudin at turpis id ultrices. Donec vitae odio auctor, molestie lorem sed, tincidunt quam. Donec ornare venenatis enim sit amet varius. Morbi urna odio, eleifend viverra pretium et, commodo sit amet neque. Fusce nec semper erat. Sed vel nisi elementum, luctus ante nec, interdum neque. Sed a eleifend massa. Mauris sit amet scelerisque augue. Sed non porta magna.</td></tr>
+            </table>
+        </div>
+
+        <footer>
+            Autor: <address>Piotr Trzeciak (trzeciak.piotr26@gmail.com) i Artsem Sokal(artyomlox2004@gmail.com)</address>
+            <p id="stopka">795463233</p>
+        </footer>
+    </center></body>
+</html>

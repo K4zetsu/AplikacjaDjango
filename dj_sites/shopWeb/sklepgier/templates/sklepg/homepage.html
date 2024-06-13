@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta class="author" content="Piotr Trzeciak">
+        <link href="{% static 'css/cennik.css'%}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <img src="{% static 'img/diceroll-logo.png' %}" alt="zdjecie logo" id="zdjecie"/>
+        </div>
+
+        <center><table id="menu" style="margin:50px; padding:15px ;">
+            <td id="strona_glowna"><a href="strona_glowna.html">STRONA GŁÓWNA</a></td>
+            <td id="o_nas"><a href="o_nas.html">O NAS</a></td>
+            <td id="kontakt"><a href="kontakt.html">KONTAKT</a></td>
+            <td id="faq"><a href="faq.html">FAQ</a></td>
+            <td id="cennik"><a href="cennik.html">CENNIK</a></td>
+            <td id="szukajka"><input id="szukajka" type="text" name="imię" size="20" placeholder="Wyszukaj produkt"/></td>
+        </table>
+        <table id="cennik">
+           <tr>
+
+            </tr>
+            <tr>
+                <td><ul><ul class="nazwa"><p class="kategorie"><strong>Podręczniki do gry/dodatki</strong></p></ul>
+                    
+                    {% for post in posts %}
+                    <div>
+                        <h3>{{ post.title }}</h3>
+                        <div>{{ post.content }}
+                            <img src="{{ post.photo.url }}" alt="{{ post.title }}"/>
+                        </div>
+                        <p>{{ post.created_at }}</p>
+                    </div>
+                    <hr>
+                    {% endfor %}
+                </ul></td>
+            </tr><tr>    
+                <td><ul><ul class="nazwa"><p class="kategorie"><strong>Akcesoria do gry</strong></p></ul>
+                    <ul class="rodzaje"><strong>Kości do gry</strong>
+                        <li class="produkty">Q-Workshop, Komplet kości, Macabre - 66zł</li>
+                        <li class="produkty">Kostki RPG Smoczy Modern Zestaw 7 Czarno-Miedzianych Kości - 57zł</li>
+                        <li class="produkty">Rebel Komplet Kości RPG Gęsty Rdzeń Morskie - 32zł</li>
+                    </ul>
+                    <ul class="rodzaje"><strong>Pudełko na kości</strong>
+                        <li class="produkty">D20 Storage box with Magnetic lock with mystery dice option - 90zł</li>
+                        <li class="produkty">Personalised - d&d - dice box - 260zł</li>
+                        <li class="produkty">Przybornik na biurko / Kubek do gry w kości DICE TO GO - 73zł</li>
+                    </ul>
+                    <ul class="rodzaje"><strong>Screen Game Mastera</strong>
+                        <li class="produkty">Blood Red - Game Master Screen - 250zł</li>
+                        <li class="produkty">Ekran Mistrza mechaniczne urządzenie do gier planszowych 70070 - 270zł</li>
+                        <li class="produkty">Ekran drewniany RGFK Księga przygód - 120zł</li>
+                    </ul>
+                </ul></td>
+            </tr><tr>
+                <td><ul><ul class="nazwa"><p class="kategorie"><strong>Figurki, farby i pozostałe</strong></p></ul>
+                    <ul class="rodzaje"><strong>Figurki</strong>
+                        <li class="produkty">ZESTAW 14 FIGUREK NA SESJĘ DND SZARE 20 MM - 88zł</li>
+                        <li class="produkty">Figurka na zamówienie - x zł</li>
+                        <li class="produkty">Dungeons & Dragons: Icons of the Realms: Mythic Odysseys of Theros Booster Pack - 150zł</li>
+                    </ul>
+                    <ul class="rodzaje"><strong>Farby</strong>
+                        <li class="produkty">Vallejo 72299 Zestaw Farb Akrylowych, Wielokolorowe, 16 Sztuk - 117zł</li>
+                        <li class="produkty">Zombicide - Black Plague Set - Zestaw farb do pomalowania zestawu Czarna Plaga / Army Painter - 125zł</li>
+                        <li class="produkty">The Army Painter Dungeons and Dragons Nolzur's Marvelous Pigments Undead Paint Set - 95zł</li>
+                    </ul>
+                    <ul class="rodzaje"><strong>Pozostałe</strong>
+                        <li class="produkty">Zestaw pędzli Micro Fine Detail dla artysty Akryl - 20zł</li>
+                        <li class="produkty">Uchwyt z lupą, podświetleniem LED - trzecia ręka TE-800 - 50zł</li>
+                        <li class="produkty">LUPA DO OKA X20 JUBILERSKA ZEGARMISTRZOWSKA - 20zł</li>
+                    </ul>
+                </ul></td>
+            </tr>
+        </table>
+        <footer>
+            Autor: <address>Piotr Trzeciak (trzeciak.piotr26@gmail.com)</address>
+            <p id="stopka">795463233</p>
+        </footer>
+    </center></body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta class="author" content="Piotr Trzeciak">
+        <link href="{% static 'css/kontakt.css'%}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <a href="http://127.0.0.1:8000/"><img src="{% static 'img/logo-no-background.png'%}" alt="zdjecie logo" id="zdjecie"/></a>
+        </div>
+
+        <center><table id="menu" style="margin:50px; padding:15px ;">
+            <td id="strona_glowna"><a href="http://127.0.0.1:8000/">STRONA GŁÓWNA</a></td>
+            <td id="o_nas"><a href="http://127.0.0.1:8000/o_nas/">O NAS</a></td>
+            <td id="kontakt"><a href="http://127.0.0.1:8000/kontakt/">KONTAKT</a></td>
+            <td id="faq"><a href="http://127.0.0.1:8000/faq/">FAQ</a></td>
+            <td id="cennik"><a href="http://127.0.0.1:8000/cennik/">CENNIK</a></td>
+            <form action="{% url 'price_url' %}" method="get">
+                <td id="szukajka"><input id="szukajka" type="search" name="q" size="20" placeholder="Wyszukaj produkt"/><button type="submit">Wyszukaj</button></td>
+                </form> 
+                </table>
+        <div><p id="informator">Kliknij w poniższe ikony aby przenieść się do naszych porfili na mediach społecznościowych!</p></div>
+        <table id="media">
+            <tr><td class="medium"><a href="https://www.facebook.com/piotr.trzeciak.9022/"><img src="{% static 'img/fb.png'%}" alt="zdjecie" class="media_spol"></a></td><td class="medium"><a href="https://www.instagram.com/gondolier_pt/"><img src="{%static 'img/ig.png'%}" alt="zdjecie" class="media_spol"></a></td><td class="medium"><a href="https://www.instagram.com/gondolier_pt/"><img src="{% static 'img/tiktok.png'%}" alt="zdjecie" class="media_spol"></a></td><td class="medium"><a href="https://www.youtube.com/channel/UCp4QG-U_LK_1j-rO-07kbKw"><img src="{% static 'img/yt.png'%}" alt="zdjecie" class="media_spol"></a></td></tr>
+        </table>
+        <div id="informacje_kontaktowe"><table id="formularz_kontakt"><td id="dane kontaktowe">
+                <table id="dane_kontaktowe">
+                    <td><img src="{% static 'img/wodawbutelce.png'%}" alt="zdjecie wody w butelce" width="70px"> <h2>Dane kontaktowe: </h2>
+                    <h4>Telefon: 795463233</h4>
+                    <h4>Email: trzeciak.piotr26@gmail.com</h4></td></td>
+                </table>
+                <td><table id="formularz">
+                    <td><form action="mailto:trzeciak.piotr26@gmail.com" method="post" id="formularz">
+                        <p id="wyslijnamwiadomosc">Chcesz wysłać nam wiadomość? Śmiało!</p>
+                        <p id="imie"><label><input type="text" name="imie" autocomplete="on" required="required" placeholder="Imię"/></label></p>
+                        <p id="nazwisko"><label><input type="email" name="haslo" required="required" placeholder="E-mail"/></label></p>
+                        <p id="textarea"><label><textarea  name="tresc" rows="10" cols="50" required="required" placeholder="Treść wiadomości"></textarea></label></p>
+                        <p id="przycisk"><button type="submit">Wyślij</button></p>
+                    </form></td></td>
+                </table>
+            </table></div>
+    </center>
+    <footer>
+        Autor: <address>Piotr Trzeciak (trzeciak.piotr26@gmail.com) i Artsem Sokal(artyomlox2004@gmail.com)</address>
+        <p id="stopka" style="font-size: small;">795463233</p>
+</footer>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta class="author" content="Piotr Trzeciak">
+        <link href="{% static 'css/strona_glowna.css'%}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <a href="http://127.0.0.1:8000/"><img src="{% static 'img/logo-no-background.png'%}" alt="zdjecie logo" id="zdjecie"/></a>
+        </div>
+
+        <center><table id="menu" style="margin:50px; padding:15px ;">
+            <td id="strona_glowna"><a href="http://127.0.0.1:8000/">STRONA GŁÓWNA</a></td>
+            <td id="o_nas"><a href="http://127.0.0.1:8000/o_nas/">O NAS</a></td>
+            <td id="kontakt"><a href="http://127.0.0.1:8000/kontakt/">KONTAKT</a></td>
+            <td id="faq"><a href="http://127.0.0.1:8000/faq/">FAQ</a></td>
+            <td id="cennik"><a href="http://127.0.0.1:8000/cennik/">CENNIK</a></td>
+            <td id="szukajka"><form action="{% url 'price_url' %}" method="get">
+            <input id="szukajka" type="search" name="q" size="20" placeholder="Wyszukaj produkt"/><button type="submit">Wyszukaj</button>
+            </form>
+            </td>
+            </table>
+        <div id="napis"><p id="napis">Zamów najwyższej jakości kości do gry, pudełka, mapy, podręczniki, figurki i wszystko to czego potrzebuje każdy gracz wygodnie, w jednym miejscu!</p></div>
+        <table id="obrazy">
+            <td id="reklama"><img src="{% static 'img/reklama.jpg'%}" alt="zdjecie" width="90px" id="reklama"></td>
+            <td id="reklama2"><img src="{% static 'img/brotherswar.jpg'%}" alt="zdjecie" width="90px" id="reklama2"></td>
+        </table>
+        <Br></br>
+        <table class="wiadomosci">
+            <td id="obrazmistrza"><img src="{% static 'img/gamemaster1.jpg'%}" alt="zdjecie" width="450px"></td>
+            <td id="mistrzgry">Pragniesz zostać mistrzem gry, prowadzić graczy przez niebezpieczny świat, tworzyć przygody i realizować przgody o których pieśni będą śpiewane po wieki? Cóż, możesz! Nie zapomnij tylko o odpowiednim wyposażeniu!</td>
+        </table>
+        <table class="wiadomosci">
+            <td id="obrazgracza">Tworzenie kampanii nie jest dla ciebie i chcesz jako jeden z bohaterów zatopić się w mrocznym świecie pełnym zadziwiających istot, krajobrazów i zasad? Oczywiście! przyda ci się to!</td>
+            <td id="gracz"><img src="{% static 'img/gracz.jpg'%}" alt="zdjecie" width="450px"></td>
+        </table>
+        <table class="wiadomosci">
+            <td id="obraztechnika"><img src="{% static 'img/designer.jpg'%}" alt="zdjecie" width="450px"></td>
+            <td id="technik">Kampanie nie są dla ciebie a twym kosturem i magią są pędzel i farby którymi możesz tworzyć rekwizyty, figurki i wszystko to czego potrzebują bohaterowie i mistrzowie gry? Z pewnością będziesz tego potrzebował!</td>
+        </table>
+        <footer>
+            Autor: <address>Piotr Trzeciak (trzeciak.piotr26@gmail.com) i Artsem Sokal(artyomlox2004@gmail.com)</address>
+            <p id="stopka">795463233</p>
+        </footer>
+    </center></body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta class="author" content="Piotr Trzeciak">
+        <link href="{% static 'css/cennik.css' %}" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <a href="http://127.0.0.1:8000/"><img src="{% static 'img/logo-no-background.png'%}" alt="zdjecie logo" id="zdjecie"/></a>
+        </div>
+
+        <center><table id="menu" style="margin:50px; padding:15px ;">
+            <td id="strona_glowna"><a href="http://127.0.0.1:8000/">STRONA GŁÓWNA</a></td>
+            <td id="o_nas"><a href="http://127.0.0.1:8000/o_nas/">O NAS</a></td>
+            <td id="kontakt"><a href="http://127.0.0.1:8000/kontakt/">KONTAKT</a></td>
+            <td id="faq"><a href="http://127.0.0.1:8000/faq/">FAQ</a></td>
+            <td id="cennik"><a href="http://127.0.0.1:8000/cennik/">CENNIK</a></td>
+            <form action="{% url 'price_url' %}" method="get">
+            <td id="szukajka"><input id="szukajka" type="search" name="q" size="20" placeholder="Wyszukaj produkt"/><button type="submit">Wyszukaj</button></td>
+            </form>
+        </table>
+
+
+                    {% for post in ofertsf %}
+
+                    <div class="listgame" style = "border:2px solid black;border-radius: 10px;margin-right: 600px;margin-left: 600px;margin-bottom: 50px;">
+                    
+                    <div style="font-size: larger;margin-top: 5px;"><strong>{{post.category}}</strong></div>
+                    
+                    <div style="font-size: large; margin-bottom: 4px;margin-top: 4px;">{{post.name}}</div>
+                    <div><img src="{{ post.photo.url }}" alt="{{ post.title }}" width="200px" height="120px"/>
+                        <div style="margin-top: 5px; margin-bottom: 5px;">{{post.price}} zł</div></div>
+                    
+                    </div>
+                            {% endfor %}
+
+        <footer>
+            Autor: <address>Piotr Trzeciak (trzeciak.piotr26@gmail.com) i Artsem Sokal(artyomlox2004@gmail.com)</address>
+            <p id="stopka">795463233</p>
+        </footer>
+    </center></body>
+</html>
